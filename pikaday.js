@@ -817,6 +817,7 @@
          */
         setDate: function(date, preventOnSelect)
         {
+            console.log('setDate', preventOnSelect)
             debugger
             if (!date) {
                 this._d = null;
