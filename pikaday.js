@@ -817,8 +817,6 @@
          */
         setDate: function(date, preventOnSelect)
         {
-            console.log('setDate', preventOnSelect)
-            debugger
             if (!date) {
                 this._d = null;
 
@@ -853,6 +851,10 @@
                 this._o.field.value = this.toString();
                 fireEvent(this._o.field, 'change', { firedBy: this });
             }
+
+            console.log('setDate', preventOnSelect)
+            debugger
+            
             if (!preventOnSelect && typeof this._o.onSelect === 'function') {
                 this._o.onSelect.call(this, this.getDate());
             }
